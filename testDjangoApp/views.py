@@ -25,11 +25,32 @@ def insert(sql, args):
     conn.close()
 
 
+def query(sql, args):
+    conn = get_conn()
+    cur = conn.cursor()
+    cur.execute(sql, args)
+    results = cur.fetchall()
+    print(type(results))  # 返回<class 'tuple'> tuple元组类型
+    user_list.clear()
+    for row in results:
+        print(row)
+        name = row[1]
+        pwd = row[2]
+        user_list.append({"user": name, "pwd": pwd})
+        pass
+    conn.commit()
+    cur.close()
+    conn.close()
+
+
 def index(request):
     if request.method == "POST":
         tusername = request.POST.get("username", None)
         tpassword = request.POST.get("password", None)
         sql = 'INSERT INTO test_table(NAME,PASSWORD)  VALUES(%s,%s);'
         insert(sql, (tusername, tpassword))
+
+    sql = 'SELECT * FROM test_table;'
+    query(sql, None)
 
     return render(request, "index.html", {"data": user_list})
