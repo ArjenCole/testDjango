@@ -1,83 +1,244 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <!-- meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- css -->
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/pace.css">
-    <link rel="stylesheet" href="/static/css/custom.css">
+        <!-- css -->
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/pace.css">
+        <link rel="stylesheet" href="/static/css/custom.css">
 
-    <style>
-        span.highlighted {
-            color: red;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header id="site-header">
-            <div class="row">
-                <div class="col-md-4 col-sm-5 col-xs-8">
-                    <div class="logo">
-                        <h1><a href="/"><b>Black</b> &amp; White</a></h1>
-                    </div>
-                </div><!-- col-md-4 -->
-                <div class="col-md-8 col-sm-7 col-xs-4">
-                    <nav class="main-nav" role="navigation">
-                        <div class="navbar-header">
-                            <button type="button" id="trigger-overlay" class="navbar-toggle">
-                                <span class="ion-navicon"></span>
-                            </button>
+        <style>
+            span.highlighted {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header id="site-header">
+                <div class="row">
+                    <div class="col-md-4 col-sm-5 col-xs-8">
+                        <div class="logo">
+                            <h1><a href="/"><b>Arjen</b> &amp; Cole</a></h1>
                         </div>
+                    </div><!-- col-md-4 -->
+                    <div class="col-md-8 col-sm-7 col-xs-4">
+                        <nav class="main-nav" role="navigation">
+                            <div class="navbar-header">
+                                <button type="button" id="trigger-overlay" class="navbar-toggle">
+                                    <span class="ion-navicon"></span>
+                                </button>
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="cl-effect-11"><a href="/index" data-hover="首页">首页</a></li>
+                                    <li class="cl-effect-11"><a href="#" data-hover="博客">博客</a></li>
+                                    <li class="cl-effect-11"><a href="#" data-hover="注册">注册</a></li>
+                                    <li class="cl-effect-11"><a href="#" data-hover="登陆">登陆</a></li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </nav>
+                        <div id="header-search-box">
+                            <a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+                            <div id="search-form" class="search-form">
+                                <form role="search" method="get" id="searchform" action="/search/">
+                                    <input type="search" name="q" placeholder="搜索" required>
+                                    <button type="submit"><span class="ion-ios-search-strong"></span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div><!-- col-md-8 -->
+                </div>
+            </header>
+        </div>
 
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="cl-effect-11"><a href="index" data-hover="首页">首页</a></li>
-                                <li class="cl-effect-11"><a href="#" data-hover="博客">博客</a></li>
-                                <li class="cl-effect-11"><a href="#" data-hover="关于">关于</a></li>
-                                <li class="cl-effect-11"><a href="#" data-hover="联系">联系</a></li>
+        <div class="content-body">
+            <div class="container">
+                <div class="row">
+                    <main class="col-md-12">
+                        <article class="post post-2">
+                            <header class="entry-header">
+                                <h1 class="entry-title">
+                                    <a href="/post/2/">section</a>
+                                </h1>
+                            </header>
+                            <div class="entry-content clearfix" align="center">
+                                <img height="200" width="200"  src="/static/image/170530 S.png">
+                                <hr />
+                                <!--p>标题语法格式： &#39;#&#39;+&#39;空格&#39;+&#39;文本&#39; 一级标题二级标题三级标题四级标题五级标题六级标...</p-->
+                                <p>适用于市政线性工程的工程量自动计算软件，支持开挖/非开挖管线敷设、箱涵、管廊、各类构筑物的工程量自动识别及计算。</p>
+                                <div class="read-more cl-effect-14">
+                                    <a href="/post/2/" class="more-link">点击下载 <span class="meta-nav">→</span></a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="post post-1">
+                            <header class="entry-header">
+                                <h1 class="entry-title">
+                                    <a href="/post/1/">brackets</a>
+                                </h1>
+                            </header>
+                            <div class="entry-content clearfix" align="center">
+                                <img height="200" width="200"  src="/static/image/140405.png">
+                                <hr />
+                                <p>适用于市政工程构筑物的工程量辅助计算软件，内置给水/污水/管廊构件库，快速编制工程量计算底稿，高效校审修改。</p>
+                                <div class="read-more cl-effect-14">
+                                    <a href="/post/1/" class="more-link">点击下载 <span class="meta-nav">→</span></a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="post post-1">
+                            <header class="entry-header">
+                                <h1 class="entry-title">
+                                    <a href="/post/1/">missions</a>
+                                </h1>
+                            </header>
+                            <div class="entry-content clearfix" align="center">
+                                <img height="200" width="200"  src="/static/image/180101 m.png">
+                                <hr />
+                                <p>适用于小型团队的轻量化人员任务管理系统，任务直观展示，数据集中处理，有效改善任务分配合理性，提升团队效率。</p>
+                                <div class="read-more cl-effect-14">
+                                    <a href="/post/1/" class="more-link">点击下载 <span class="meta-nav">→</span></a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="post post-1">
+                            <header class="entry-header">
+                                <h1 class="entry-title">
+                                    <a href="/post/1/">folders</a>
+                                </h1>
+                            </header>
+                            <div class="entry-content clearfix" align="center">
+                                <img height="200" width="200"  src="/static/image/f_128X128.ico">
+                                <hr />
+                                <p>适用于个人的项目文件夹管理软件，自定义配置目录，搜索实时反馈，快速直达目标文件夹。</p>
+                                <div class="read-more cl-effect-14">
+                                    <a href="/post/1/" class="more-link">点击下载 <span class="meta-nav">→</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                    </main>
+                    <!--aside class="col-md-4">
+                        <div class="widget widget-recent-posts">
+                            <h3 class="widget-title">最新文章</h3>
+                            <ul>
+                                    <li>
+                                        <a href="/post/2/">Mardown 语法测试</a>
+                                    </li>
+                                    <li>
+                                        <a href="/post/1/">Django 博客教程：前言</a>
+                                    </li>
                             </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </nav>
-                    <div id="header-search-box">
-                        <a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
-                        <div id="search-form" class="search-form">
-                            <form role="search" method="get" id="searchform" action="/search/">
-                                <input type="search" name="q" placeholder="搜索" required="">
-                                <button type="submit"><span class="ion-ios-search-strong"></span></button>
-                            </form>
                         </div>
-                    </div>
-                </div><!-- col-md-8 -->
+                        <div class="widget widget-archives">
+                            <h3 class="widget-title">归档</h3>
+                            <ul>
+                                    <li>
+                                        <a href="/archives/2017/5/">2017
+                                            年 5 月</a>
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="widget widget-category">
+                            <h3 class="widget-title">分类</h3>
+                            <ul>
+                                    <li>
+                                        <a href="/category/1/">Django 博客教程 <span
+                                                class="post-count">(2)</span></a>
+                                    </li>
+                            </ul>
+                        </div>
+
+                        <div class="widget widget-tag-cloud">
+                            <h3 class="widget-title">标签云</h3>
+                            <ul>
+                                    <li>
+                                        <a href="/tag/1/">Django</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tag/2/">Python</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tag/3/">教程</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tag/4/">test</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tag/5/">Hello Word</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tag/6/">Pythonzhcn</a>
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="rss">
+                            <a href="/all/rss/"><span class="ion-social-rss-outline"></span> RSS 订阅</a>
+                        </div>
+                    </aside-->
+                </div>
             </div>
-        </header>
-    </div>
-    <h1 style="background-color: antiquewhite;color: black;">用户输入</h1>
-    <form action="/index/" method="post">
-        <input type="text" name="username"/>
-        <input type="password" name="password"/>
-        <input type="submit" value="提交"/>
-    </form>
-    <hr />
-    <h1 style="background-color: antiquewhite;color: black;">用户展示</h1>
-    <table border="1">
-        <thead>
-            <th>用户名</th>
-            <th>密码</th>
-        </thead>
-        <tbody>
-            {% for line in data %}
-                <tr>
-                    <td>{{ line.user }}</td>
-                    <td>{{ line.pwd }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</body>
+        </div>
+        <footer id="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="copyright">&copy 2019 - 采集自<a href="http://www.cssmoban.com/"
+                                                                target="_blank" title="模板之家">www.cssmoban.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Mobile Menu -->
+        <div class="overlay overlay-hugeinc">
+            <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+            <nav>
+                <ul>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="#">博客</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><a href="#">登陆</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <script src="/static/blog/js/script.js"></script>
+
+
+
+
+
+
+
+        <!--h1 style="background-color: antiquewhite;color: black;">用户输入</h1>
+        <form action="/index/" method="post">
+            <input type="text" name="username"/>
+            <input type="password" name="password"/>
+            <input type="submit" value="提交"/>
+        </form>
+        <hr />
+        <h1 style="background-color: antiquewhite;color: black;">用户展示</h1>
+        <table border="1">
+            <thead>
+                <th>用户名</th>
+                <th>密码</th>
+            </thead>
+            <tbody>
+                {% for line in data %}
+                    <tr>
+                        <td>{{ line.user }}</td>
+                        <td>{{ line.pwd }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table-->
+    </body>
 </html>
