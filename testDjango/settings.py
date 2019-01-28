@@ -119,4 +119,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/'  # 这个是引用指针，可以是任何名字，但是html中要和它一致
+STATICFIELDS_DIRS = (
+    os.path.join(BASE_DIR, 'static'),  # 这个是文件夹名称，和目录对应和html引用无关，但是因为是元组所有最后要加都好
+)
