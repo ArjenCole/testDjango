@@ -25,7 +25,7 @@ SECRET_KEY = '^=lq&*xrwo3nu#v0)l-2nnpzz-^s6+o#0cuuuy&njp*-(r2&*6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -121,5 +121,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'  # 这个是引用指针，可以是任何名字，但是html中要和它一致
 STATICFIELDS_DIRS = (
-    os.path.join(BASE_DIR, 'static'),  # 这个是文件夹名称，和目录对应和html引用无关，但是因为是元组所有最后要加都好
+    os.path.join(BASE_DIR, 'static'),  # 这个是文件夹名称，和目录对应和html引用无关，但是因为是元组所有最后要加逗号
 )
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
