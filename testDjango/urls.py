@@ -18,8 +18,10 @@ from testDjangoApp import views
 
 from django.conf.urls.static import static
 from django.conf import settings
+from django.urls import path
 
 urlpatterns = [
     # path('admin/', admin.site.urls), #admin后台的路由
-    url(r'^index/', views.index),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # url(r'^index/', views.index),
+    path('', views.index),  # 来自服务器的请求为网站根目录时，由视图中的index函数进行处理。
+] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)

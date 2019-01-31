@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^=lq&*xrwo3nu#v0)l-2nnpzz-^s6+o#0cuuuy&njp*-(r2&*6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -120,7 +120,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'  # 这个是引用指针，可以是任何名字，但是html中要和它一致
-STATICFIELDS_DIRS = (
-    os.path.join(BASE_DIR, 'static'),  # 这个是文件夹名称，和目录对应和html引用无关，但是因为是元组所有最后要加逗号
-)
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFIELDS_DIRS = (
+    ("css", os.path.join(STATIC_ROOT, 'css')),  # 这个是文件夹名称，和目录对应和html引用无关，但是因为是元组所有最后要加逗号
+    ("image", os.path.join(STATIC_ROOT, 'image')),  # 这个是文件夹名称，和目录对应和html引用无关，但是因为是元组所有最后要加逗号
+
+)
